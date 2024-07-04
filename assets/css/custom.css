@@ -1,0 +1,52 @@
+/* Global Body Styles */
+body {
+    background-color: #282828;
+}
+
+/* Swiper Container Styles */
+.swiper-container {
+    height: 100vh;
+    /* Adjust height as needed */
+}
+
+/* Swiper Pagination Styles */
+.swiper-pagination-bullet {
+    width: 50px !important;
+    height: 2px !important;
+    background: #afafaf !important;
+    opacity: 0.7;
+    margin: 20px 5px !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.swiper-pagination-bullet::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.swiper-pagination-bullet-active::before {
+    animation: progress 3s linear forwards;
+}
+
+/* Animation Keyframes */
+@keyframes progress {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
